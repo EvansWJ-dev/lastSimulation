@@ -46,7 +46,7 @@ router.post("/", async (req, res, next) => {
       },
     });
 
-    res.json(review);
+    res.status(201).json(review);
   } catch {
     next({
       message: "The server failed to reach the database.",
@@ -72,6 +72,6 @@ router.delete("/:id", async (req, res, next) => {
       where: { id },
     });
 
-    res.sendStatus(201);
+    res.sendStatus(204);
   } catch {}
 });

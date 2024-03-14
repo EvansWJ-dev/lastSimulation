@@ -11,7 +11,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/reviews", require("./reviews.js"));
+app.use("/reviews", require("./prisma/reviews.js"));
 
 app.use((err, req, res, next) => {
   const status = err?.status ?? 500;
