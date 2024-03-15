@@ -15,3 +15,9 @@ model Review {
   name String
   product String
 }
+
+model User {
+  id Int @id @default(autoincrement())
+  username String @unique
+  password String
+}
